@@ -6,7 +6,6 @@ function findIdForChannel(channelName) {
   const url = `
     https://slack.com/api/channels.list?
     token=${token}`
-
   return fetch(url, {method: "POST"})
     .then(res => res.json())
     .then(json => {
@@ -37,5 +36,4 @@ function sendMessageToRoom(roomName, message) {
 
   return idPromise.then(id => sendMessageWithId(id, message))
 }
-
 export default sendMessageToRoom
