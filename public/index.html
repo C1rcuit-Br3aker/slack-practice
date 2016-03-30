@@ -26,9 +26,13 @@
 
   <script type="text/javascript">
      const SendPostView = require("send-post-view")
-     
+
      const poster = document.querySelector(".send-post")
      new SendPostView(poster)
+
+     const MessageHistoryView = require("message-history-view")
+     const past = document.querySelector(".main")
+     new MessageHistoryView(past)
   </script>
 </body>
 </html>
